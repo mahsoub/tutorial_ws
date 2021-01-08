@@ -202,6 +202,11 @@ include_directories(
 # catkin_add_gtest(${PROJECT_NAME}-test test/test_learning_tf2.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
+
+add_executable(turtle_tf2_broadcaster src/turtle_tf2_broadcaster.cpp)
+target_link_libraries(turtle_tf2_broadcaster
+ ${catkin_LIBRARIES}
+)
 # endif()
 
 ## Add folders to be run by python nosetests
